@@ -1,0 +1,14 @@
+Preguntas para el Grupo Delta.
+
+En general creo que está todo más o menos claro, así pues, por preguntar algo:
+-¿Cómo detecta la máquina que no tiene cambio?
+-¿Qué pasa si no hay cambio suficiente tras adquirir un producto?
+-¿Acepta todo tipo de monedas, de 1 y 2 céntimos?
+-En caso de obstrucción de algún producto al ser adquirido, ¿cómo tratará la máquina de 
+resolver el problema?
+-¿Está el teclado y las ranuras a una altura adecuada para personas discapacitadas?
+-¿Desea algún tipo de servicio añadido, para ayudar a personas minusválidas? Como una voz de qué está haciendo en cada momento por ejemplo.
+-¿Cómo será la iluminación interna de la máquina? ¿Tipo led también?
+-¿Qué pasa si introduce una moneda/billete que no reconoce? 
+-Son 50 celdas actuales, ¿son configurables o serán celdas fijas?. ¿Son las celdas privadas teniendo cada una su propia refrigeración, o abiertas, compartiendo una refrigeración común?
+-¿Cómo se reponen los productos una vez se acaben?
