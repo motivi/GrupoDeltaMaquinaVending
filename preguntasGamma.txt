@@ -1,23 +1,35 @@
-Cheng:
+A continuación se listan una serie de cuestiones que, creemos, sería importante abordar para completar el proyecto (no todas las respuestas tienen por qué estar incluidas en la descripción inicial):
 
-1.VOSOTROS VAIS A IMPLEMENTAR GUI ?
-2.VUESTRA MAQUINA TIENE UN MECANISMO DE COMPRA?
-3.CUANDO UN USUARIO ESTA HACIENDO UNA COMPRA SE OCURRE UN ERROR,QUE HACE LA MAQUINA  , SI SE PRODUCE OTRO ERROR …..?
-4.CUANDO LA MAQUINA ESTA EN REPOSO , SI HAY FALLO DE HARDWARE O SOFTWARE,QUE RESOLUCION TENEIS?
-5.QUE RESOLUCION HAY PARA PROBLEMA DE POSTCOMPRA SI EL PRODUCTO ESTA DAÑADO?
-6.EL TAMAÑO DE VUESTRA MAQUINA COMO ES ?  
- 
-AQUI SOLAMENTE PONE : Medidias de la maquina  1Õ90 x 1Õ20 x 0,90.
+1. ¿Implementaríais una interfaz gráfica de usuario?
 
-			 es Metro ?
-  	 
-7.VUESTRO TECNICO COMO REPONER PRODUCTOS EN LA MAQUINA? HAY MECANISMO DE IDENTIFICACION ? 
-8.DONDE ESTA LA APERTURA DE LA MAQUINA?
+2. ¿Se devolverá alguna información al usuario al utilizar la máquina o únicamente se le permitirá introducir datos? En caso de que se devuelva, ¿Cómo se podrá obtener información acerca de los productos (aparte de utilizando una GUI)?
 
-Jesus:
+2. ¿Qué mecanismo de compra emplearíais? ¿Cuáles son los pasos concretos para solicitar un producto y pagarlo?
 
+3. ¿Será posible recuperar el dinero una vez introducido por el usuario y antes de entregar el producto? Si un usuario esta haciendo una compra y ocurre un error, ¿qué hace la máquina? ¿Y si se produce otro error?
 
+4. Cuando el producto se entrega dañado, ¿qué solución tenéis?
 
+5. Si cuando la máquina está en reposo (no está procesando un pedido) hay un fallo de software o hardware, ¿qué solución teneis?
 
-Xiao:
+6. ¿De qué forma puede un usuario saber si el dinero que ha introducido es suficiente?
 
+7. ¿Qué unidad de medida usais para el tamaño de la máquina? Sólamente se indican los valores (1'90 x 1'20 x 0'90).
+
+8. ¿De que forma se establecerán los identificadores para cada producto? ¿Será una identificación estática o dinámica?
+
+9. ¿Guardará el sistema algún tipo de información acerca de cada producto (o cada identificador)? En caso de que lo haga, ¿se podrá configurar dicha información? ¿Mediante qué mecanismo o interfaz?
+
+10. ¿Cómo repone el técnico los productos?
+
+11. ¿De qué manera podría un técnico acceder a los sistemas internos de la máquina en caso de producirse un mal funcionamiento?
+
+12. El informe de los elementos que se quedan rápido sin stock, ¿de qué forma se redacta y almacena? ¿Cómo se señaliza en caso de quedarse sin stock?
+
+13. ¿Habrá alguna forma de comunicación con la empresa proveedora del servicio para automatizar procesos como reparaciones o reposiciones?
+
+14. ¿De que manera se recogerá el cambio (dinero restante) y cómo se recogerán los productos solicitados (ranuras con puerta u otros métodos)?
+
+15. Hay una cantidad mayor de productos que pueden dañarse fácilmente (debido a la altura y la naturaleza de los productos) que los productos que se protegen (con el sistema propuesto), ¿pensais incluir alguna medida de seguridad adicional para los productos?
+
+16. Los productos que ofreceis no tienen, en muchos casos, tamaños similares, ¿cómo pensais organizarlos en el interior de la máquina para evitar la pérdida de espacio?
