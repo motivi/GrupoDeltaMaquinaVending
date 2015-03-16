@@ -32,16 +32,37 @@ recoger el cambio.
 
 	También se deberán incluir ranuras para la introducción de billetes pequeños (de 5 y 10 euros). Los
 billetes más grandes no deberán ser aceptados. Por otro lado, se incluye una ranura para introducir tarjetas de
-descuentos.
+descuentos. La máquina podrá aceptar monedas de 5, 10, 20 y 50 ctmos., de 1 o 2 €.
+
+        Como ayuda al público ciego podemos incluir texto en braille bajo cada boton e incluir uno extra con el
+texto "Voz" y que inicie un sistema de reproducción de la información que se muestra. Para evitar perdida de
+privacidad (aún no siendo este un servicio en el que la privacidad sea especialmente importante) también se
+incluirá una salida para auriculares.
+
+        La interfaz se instalará a una altura adecuada para todos los públicos (niños, adultos, ancianos,
+discapacitados...).
 
 	Los productos se encuentran en el interior sujetos por espirales metálicas y con paneles que soporten el
 peso. Para extraer un producto, la espiral gira, arrastrando el objeto hasta la zona en la que no hay panel. Para
 evitar que los productos caigan desde demasiada altura se incluirá un brazo mecánico que en cada pedido se sitúe
 bajo la fila adecuada. El producto cae sobre este brazo, que lo  transporta hasta la zona inferior para que pueda
-ser recogido.
+ser recogido. En ciertos casos sería posible que el producto quedase atascado en el proceso. Para evitar la
+pérdida de confianza del cliente, se implementará un sistema de sensores en el brazo mecánico que detecte un peso
+sobre él. De esta forma sólo bajará cuando haya (almenos) un producto listo para recoger. Para casos en los que
+el producto quede atascado en los mecanismos de la máquina, esta mandará un mensaje a la empresa proveedora del
+servicio avisando de cualquier anomalía que detecte en el funcionamiento. La empresa deberá mandar a un técnico
+para reparar el problema.
 
 	Es necesario incluir refrigeración en la zona de los productos para mantener una temperatura agradable
 para el consumo, especialmente en las bebidas.
+
+        También sería importante implementar un sistema auxiliar de energía para casos en los que la máquina se
+quede sin sustento energético en medio de una operación. En estos casos se deberá detectar la falta de corriente
+y tratar de hacer una copia del contexto de trabajo (variables, posición del brazo y todo lo referente a la
+operación en curso) antes de quedarse sin corriente. Tras apagarse, se reiniciará usando el sistema auxiliar e
+intentará recuperar toda la información que pueda para retomar la operación minimizando el perjuicio al cliente.
+En caso de no poder retomar la operación se enviará un mensaje a la empresa y mostrará un mensaje apropiado en
+pantalla.
 
 	Los productos se encuentran organizados en filas y columnas, y cada producto concreto se identifica
 mediante la fila y la columna en la que se encuentra. Para cada uno, se utiliza una etiqueta bajo el producto que
@@ -60,6 +81,16 @@ será posible, por ejemplo, almacenando temporalmente las monedas recién introd
 el momento de almacenarlas definitivamente, si se termina la transacción con éxito, o devolverlas, en caso de
 abortarla).
 
+        En cuanto al cambio de dinero, mantendríamos una cuenta del dinero en el interior de la máquina (dinero
+que esta tiene disponible para operar). De esta forma, en caso de estar cerca de quedarse sin cambio (siempre
+antes de que esto ocurra) podrá mandar un mensaje indicándolo para que un técnico pueda reponerlo. Para esto, la
+cuenta del cambio restante podrá ser manipulada a traves de la interfaz de configuración, sólo accesible por los
+técnicos con la tarjeta y clave necesarias, y esta cuenta irá decrementando cada vez que se realice una compra.
+El indicador de falta de cambio deberá avisar a la empresa proveedora dejando dinero suficiente para, por lo menos,
+un día de funcionamiento.
+
+        Los billetes o monedas introducidos que no se reconozcan serán devueltos en el momento.
+
 	Para la configuración del sistema (introducción de los datos de cada producto, etc.) se dispondrá de una
 ranura para una tarjeta que sólo poseerán los técnicos. Se incluirá también una contraseña para acceder al menú de
 configuración. Este menú permitirá cambiar los precios, el nombre y otros parámetros referidos a cada identificador
@@ -69,7 +100,9 @@ cuando se haya habilitado mediante el menú de configuración.
 
 	Como forma de contabilizar el número de unidades de cada producto que se tienen, se podría implementar un
 sistema de sensores infrarrojos que detectase en qué posiciones hay una unidad. Así evitaríamos problemas cuando un
-usuario que haya introducido dinero teclee un identificador de un producto que no tenga unidades.
+usuario que haya introducido dinero teclee un identificador de un producto que no tenga unidades. Cuando se detecte
+que faltan demasiados productos (un tanto por ciento establecido) se envía una señal a la empresa que provee el
+servicio, así esta podrá mandar a un reponedor.
 
 	En la pantalla de informacion, en caso de no estar realizando ninguna operación se mostrará la siguiente
 estructura (la imagen se encuentra en la siguiente dirección de github).
