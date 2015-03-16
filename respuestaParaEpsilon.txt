@@ -1,14 +1,81 @@
 Preguntas para el Grupo Delta.
 
 En general creo que está todo más o menos claro, así pues, por preguntar algo:
+
 -¿Cómo detecta la máquina que no tiene cambio?
+
+	La máquina tiene un valor de cuenta de las monedas que tiene disponibles para operar.
+Esta cuenta la establece el técnico a través de la interfaz de configuración cuando repone
+el cambio y se decrementa con cada operación realizada. Cuando el sistema detecta que la
+cantidad de monedas disponibles se acerca demasiado al mínimo para operar durante una
+jornada normal se envía una señal (o mensaje) a la compañía proveedora, que podrá enviar a
+un técnico reponedor para introducir cambio suficiente.
+
 -¿Qué pasa si no hay cambio suficiente tras adquirir un producto?
+
+	Gracias a que el sistema avisa con tiempo suficiente como para reaccionar a tiempo,
+esta situación no debería producirse. Sin embargo, si no se repusiese el cambio con
+suficiente rapidez se devolvería el dinero de la transacción en curso (si se detecta que
+no hay suficiente cambio para finalizarla con éxito), se envía un mensaje a la empresa y
+se muestra un mensaje de advertencia en la pantalla.
+
 -¿Acepta todo tipo de monedas, de 1 y 2 céntimos?
+
+	La máquina aceptará sólamente monedas de 5, 10, 20 y 50 ctmos. y de 1 y 2 €. Aparte,
+también se podrán introducir billetes de 5 y 10 €.
+
 -En caso de obstrucción de algún producto al ser adquirido, ¿cómo tratará la máquina de 
 resolver el problema?
+
+	Se implementará un sistema de sensores en el brazo mecánico que recoge los productos
+para detectar si hay un peso sobre él. El brazo no bajará hasta detectar una carga y habrá
+un contador que indique cuando hay que volver a dispensar un producto porque el solicitado
+no ha llegado al brazo. En caso de que el producto se quede atascado en los mecanismos
+dificultando el funcionamiento de la máquina, esta debería detectar esta dificultad y
+avisar a la empresa, que enviaría a un técnico para reparar el problema.
+
 -¿Está el teclado y las ranuras a una altura adecuada para personas discapacitadas?
--¿Desea algún tipo de servicio añadido, para ayudar a personas minusválidas? Como una voz de qué está haciendo en cada momento por ejemplo.
+
+	Efectivamente, toda la interfaz de usuario debería instalarse a una altura apropiada
+para todos los públicos (tanto como sea posible).
+
+-¿Desea algún tipo de servicio añadido, para ayudar a personas minusválidas? Como una voz
+de qué está haciendo en cada momento por ejemplo.
+
+	Podríamos incluir todo el texto de los botones en alfabeto braille debajo de cada
+botón o ranura. Aparte se incluirá un botón especial con el texto "Voz" que activará un
+sistema de reproducción de texto para lo que se muestra en pantalla, así como una salida
+para auriculares para escuchar la información sin tener que emitirla exteriormente.
+
 -¿Cómo será la iluminación interna de la máquina? ¿Tipo led también?
--¿Qué pasa si introduce una moneda/billete que no reconoce? 
--Son 50 celdas actuales, ¿son configurables o serán celdas fijas?. ¿Son las celdas privadas teniendo cada una su propia refrigeración, o abiertas, compartiendo una refrigeración común?
+
+	La iluminación tipo led, aunque más cara que la convencional, también es más apropiada,
+puesto que las bombillas convencionales producirían demasiado calor y un consumo de energía
+extra tanto en la iluminación como en la refrigeración. Por ello la primera idea es emplear
+iluminación por led rodeando los bordes de la puerta que muestra los productos.
+
+-¿Qué pasa si introduce una moneda/billete que no reconoce?
+
+	En este caso devolvería el dinero introducido mostrando también un mensaje en pantalla.
+
+-Son 50 celdas actuales, ¿son configurables o serán celdas fijas?. ¿Son las celdas privadas
+teniendo cada una su propia refrigeración, o abiertas, compartiendo una refrigeración
+común?
+
+	Los productos no se encuentran exactamente en celdas, sino en posiciones determinadas
+por los huecos de una espiral metálica. Cada posición tiene asociada un índice propio
+(número de fila y columna) y la información acerca del producto en cada índice se podrá
+configurar a través de una interfaz de configuración sólo accesible por técnicos (ya
+descrita).
+
+	Por otro lado, una refrigeración individual de cada producto es en principio una medida
+excesiva y demasiado cara para nuestro proyecto, por lo que preferimos una refrigeración
+general.
+
 -¿Cómo se reponen los productos una vez se acaben?
+
+	Mantenemos el control de los productos restantes mediante un sistema de sensores
+infrarrojos que detectan las posiciones ocupadas, por lo que podemos establecer la regla de
+que, al detectar la máquina un número de unidades totales por debajo de un porcentaje
+establecido, esta podrá enviar un mensaje a la empresa notificando el problema para que se
+pueda enviar a un reponedor cuando proceda.
