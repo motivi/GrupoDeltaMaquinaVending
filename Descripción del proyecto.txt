@@ -116,7 +116,7 @@ servicio, así esta podrá mandar a un reponedor.
 	En la pantalla de informacion, en caso de no estar realizando ninguna operación se mostrará la siguiente
 estructura (la imagen se encuentra en la siguiente dirección de github).
 
-https://github.com/motivi/maquinaVenta/blob/master/estructuraPantalla.png "github"
+https://github.com/motivi/maquinaVenta/blob/master/Estructura de pantalla.png "github"
 
 	En caso de estar en medio de una operación, la pantalla muestra, en la zona del mensaje publicitario,
 información del producto (nombre, identificador, precio y unidades restantes) y el estado de la operación en la zona
