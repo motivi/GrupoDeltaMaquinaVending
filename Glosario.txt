@@ -1,0 +1,23 @@
+Brazo móvil. Cesta metálica de longitud igual al ancho de la máquina, utilizada para recoger los productos y que es capaz de situarse bajo una fila de productos(los productos se organizan en filas y columnas).
+
+Escaparate. Plastico protector a través del cual se muestran los productos y que aisla el compartimento de refrigeración. Debe ser de una resistencia suficiente para soportar golpes.
+
+Soporte para hardware. Estructura metálica sobre la que se instala el hardware necesario para el sistema.
+
+Interfaz de usuario. Conjunto formado por la pantalla de LED y la botonera numérica, así como los botones de voz, el de recuperar el dinero introducido y las ranuras para la introducción de monedas, billetes y tarjetas.
+ 
+Lector de tarjeta SIM. Lector interno similar al de los teléfonos móviles que se empleará para el envío de mensajes a la empresa proveedora.
+
+Empresa proveedora del servicio. Entidad o conjunto de entidades a la que pertenece la máquina y que es encargada de las reparaciones y los servicios de reposición.
+
+Sistema de refrigeración. Estará integrado en el interior de la máquina, con una temperatura regulable por la interfaz de configuración, y que mantiene la temperatura para todos los productos.
+
+Sistema de ilunimación. Sistema de LEDs que rodearán el plástico protector y que darán una visión más clara de los productos.
+
+Identificador de producto. Conjunto de dos números que corresponden a la fila y la columna de una posición, que se emplea para referenciar al producto concreto en una operación y que se muestra en las etiquetas bajo los productos.
+
+Contexto de trabajo. Estado de la memoria principal del sistema (variables, etc) en un momento concreto durante una operación. Este contexto deberá guardarse (o intentarlo) al detectarse un posible problema de energía (el sistema está a punto de quedarse sin energía).
+
+Cuenta de cambio restante. Variable del sistema que controla el número de monedas de cada tipo que se guardan y que pueden ser empleadas para devolver cambio en una compra. Estas monedas se guardan de forma independiente al dinero que ha sido introducido en la máquina.
+
+Pantalla de información. Pantalla de LED a través de la que se muestra todo lo referente al producto, la empresa, el estado de la operación, etc. o un mensaje publicitario en caso de no estar realizando ninguna operación.
