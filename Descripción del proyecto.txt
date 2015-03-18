@@ -56,6 +56,10 @@ para reparar el problema.
 	Es necesario incluir refrigeración en la zona de los productos para mantener una temperatura agradable
 para el consumo, especialmente en las bebidas.
 
+        En cuanto a la iluminación, esta se podría realizar mediante LEDs que rodeen la ventana que muestra los
+productos. Este tipo de iluminación es más adecuada que la convencional porque produce menos calor y su consumo
+es reducido.
+
         También sería importante implementar un sistema auxiliar de energía para casos en los que la máquina se
 quede sin sustento energético en medio de una operación. En estos casos se deberá detectar la falta de corriente
 y tratar de hacer una copia del contexto de trabajo (variables, posición del brazo y todo lo referente a la
@@ -75,11 +79,10 @@ producto requerido y devuelve el cambio pertinente.
 unidades restantes) se tecleará el identificador del producto en la botonera y la pantalla sobre esta mostrará lo
 necesario.
 
-	Para evitar aquellos casos en que por error un usuario introduce monedas por error o en una máquina que
-esté fuera de servicio, también será necesario un botón que devuelva el dinero que se acaba de introducir (esto
-será posible, por ejemplo, almacenando temporalmente las monedas recién introducidas en una cavidad especial hasta
-el momento de almacenarlas definitivamente, si se termina la transacción con éxito, o devolverlas, en caso de
-abortarla).
+	Para evitar aquellos casos en que un usuario introduce monedas por error o en una máquina que esté fuera
+de servicio, también será necesario un botón que devuelva el dinero que se acaba de introducir (esto será posible,
+por ejemplo, almacenando temporalmente las monedas recién introducidas en una cavidad especial hasta el momento de
+almacenarlas definitivamente, si se termina la transacción con éxito, o devolverlas, en caso de abortarla).
 
         En cuanto al cambio de dinero, mantendríamos una cuenta del dinero en el interior de la máquina (dinero
 que esta tiene disponible para operar). De esta forma, en caso de estar cerca de quedarse sin cambio (siempre
@@ -87,9 +90,15 @@ antes de que esto ocurra) podrá mandar un mensaje indicándolo para que un téc
 cuenta del cambio restante podrá ser manipulada a traves de la interfaz de configuración, sólo accesible por los
 técnicos con la tarjeta y clave necesarias, y esta cuenta irá decrementando cada vez que se realice una compra.
 El indicador de falta de cambio deberá avisar a la empresa proveedora dejando dinero suficiente para, por lo menos,
-un día de funcionamiento.
+un día de funcionamiento. Aún así, en caso de que la máquina se encuentre en el caso de que se ha introducido
+dinero pero detecte que no hay suficientes monedas para finalizar la operación solicitada, esta deberá devolver el
+dinero introducido, enviar un mensaje a la empresa y mostrar un mensaje de advertencia en la pantalla. Para poder
+incluir esta función, la máquina debe calcular si hay suficiente cambio para completar la operación tras haberse
+introducido el código del producto seleccionado en cada peticion realizada (el código de producto se introduce
+después de haber introducido dinero, tal y como hemos descrito el procedimiento de realizar una petición).
 
-        Los billetes o monedas introducidos que no se reconozcan serán devueltos en el momento.
+        Los billetes o monedas introducidos que no se reconozcan serán devueltos en el momento, mostrando por
+pantalla un mensaje informativo.
 
 	Para la configuración del sistema (introducción de los datos de cada producto, etc.) se dispondrá de una
 ranura para una tarjeta que sólo poseerán los técnicos. Se incluirá también una contraseña para acceder al menú de
@@ -107,7 +116,7 @@ servicio, así esta podrá mandar a un reponedor.
 	En la pantalla de informacion, en caso de no estar realizando ninguna operación se mostrará la siguiente
 estructura (la imagen se encuentra en la siguiente dirección de github).
 
-https://github.com/motivi/maquinaVenta/blob/master/estructuraPantalla.png "github"
+https://github.com/motivi/maquinaVenta/blob/master/Estructura de pantalla.png "github"
 
 	En caso de estar en medio de una operación, la pantalla muestra, en la zona del mensaje publicitario,
 información del producto (nombre, identificador, precio y unidades restantes) y el estado de la operación en la zona
