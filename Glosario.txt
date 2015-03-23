@@ -1,4 +1,5 @@
-Brazo móvil. Cesta metálica de longitud igual al ancho de la máquina, utilizada para recoger los productos y que es capaz de situarse bajo una fila de productos(los productos se organizan en filas y columnas).
+Brazo móvil. Cesta metálica de longitud igual al ancho de la máquina, utilizada para 
+recoger los productos y que es capaz de situarse bajo una fila de productos(los productos se organizan en filas y columnas).
 
 Escaparate. Plastico protector a través del cual se muestran los productos y que aisla el compartimento de refrigeración. Debe ser de una resistencia suficiente para soportar golpes.
 
